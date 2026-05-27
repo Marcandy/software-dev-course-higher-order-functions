@@ -107,12 +107,20 @@ Step-by-Step:
 3. Store the total in a new variable.
 */
 
-const total = products.reduce((acc, currProd) => {
-  return currProd.inStock ? acc + currProd.price : acc
-},0);// initial value for total
+const inventory =  products.reduce((total, currentProduct) => {
+  return currentProduct.inStock ? total + currentProduct.price : total
+},0);// setting initial value
+
+// products.reduce((total, currentProduct) => {
+//     if(currentProduct.inStock)
+//     {
+//        return total + currentProduct.price;
+//     }
+//     return total;
+// }, 0);
 
 
-console.log(total)
+console.log(inventory)
 // ============================================
 // 🧪 Console Test Your Work
 // ============================================
